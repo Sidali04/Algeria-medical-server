@@ -1,0 +1,571 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 1000vh;
+    font-family: cursive;
+    overflow-x: hidden;
+    /*background-image:url(background.jfif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    */
+}
+header{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-image:radial-gradient(#0c0c9e,blue);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 4;
+    
+}
+header h1{
+    color: #ebe1cd;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-family: cursive;
+}
+input{
+    font-family: cursive;
+    font-size: 1.4em;
+    font-weight: bolder;
+    transition: 1s;
+    position: absolute;
+    top: 12px;
+    left: 1080px;
+    width: 130px;
+    height: 45px;
+    padding-left: 10px;
+    border: 2px solid rgba(10, 10, 10, 0.1);
+    border-radius: 5px;
+    background-color: transparent;
+    color: #5d5d5d;
+    box-shadow: 5px 5px 10px 40px #eeeff0 inset;
+}
+input:focus{
+    width: 500px;
+    transition: 1s;
+    text-align: left;
+    left: 710px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header #search{
+    position: absolute;
+    left: 1180px;
+    top: 23px;
+    font-size: 1.6em;
+    font-weight: bolder;
+    color: #5d5d5d;
+}
+#user{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    left: 1250px;
+    font-size: 36px;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 5px solid #ebe1cd;;
+    color: #ebe1cd;;
+}
+#user:hover + .Sign{
+    display: block;
+}
+.Sign{
+    width: 150px;
+    height: 120px;
+    background-color: #eef2f4;
+    position: absolute;
+    top: 70px;
+    left: 1150px;
+    z-index: 4;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 2px solid rgba(10, 10, 10, 0.1);
+    display: none;
+}
+.Sign a{
+    background-color:#eef2f4;
+    border: 2px solid #b3b0b0;
+    border-radius: 5px;
+    padding:5px 30px 5px 30px;
+    text-decoration: none;
+    font-size: larger;
+    font-family: cursive;
+    color: black;
+    position: absolute;
+}
+#Sign_in{
+    top: 10px;
+}
+#Sign_up{
+    top: 60px;
+}
+.Sign a:hover{
+    cursor: pointer;
+    background-color: #0a0aa7;
+    color: white;
+    transition: .5s;
+}
+/**********************************************************************/
+nav{
+    width: 100%;
+    height: 70px;
+    background:transparent;
+    backdrop-filter: blur(20px);
+    position: absolute;
+    justify-content: center;
+    border-bottom: 1px solid #989595;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: 3;
+    box-shadow: 1px 1px 7px 1px black;
+    position: absolute;
+    top: 80px;
+}
+.options{
+    width: 170px;
+    height: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    position: relative;
+    left: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background:transparent;
+    backdrop-filter: blur(20px);
+    border: none;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    font-family: cursive;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.options:hover{
+    text-decoration: underline 3px blue;
+}
+#scroll{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: #3232f3;
+    box-shadow: 2px 2px 20px 1px black;
+    cursor: pointer;
+    transition: .6s;
+    display: none;
+    z-index: 3;
+}
+#scroll:hover{
+    background-color: #6b6bc0;
+    transition: .6s;
+    border-radius: 40%;
+}
+button #go_up{
+    font-size: large;
+    color: white;
+}
+/**********************************************************************/
+#divPediatrics{
+    width: 600px;
+    height: 380px;
+    background:transparent;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 160px;
+    left: 10px;
+    border-radius: 10px;
+    display: none;  
+    box-shadow: 1px 1px 20px 1px grey;
+    text-align: center;
+    cursor: pointer;
+}
+#divPediatrics a{
+    font-family: cursive;
+    font-size: 1.3em;
+    text-decoration: none;
+    display: grid;
+    border: 2px solid #989595;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    background:transparent;
+    backdrop-filter: blur(20px);
+    transition: .7s;
+}
+#divPediatrics a:hover{
+    color: white;
+    background-color: #3232f3;
+    border-radius: 2px;
+    font-weight: bolder;
+}
+/*°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°*/
+#divInternal{
+    width: 600px;
+    height: 410px;
+    background:transparent;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 160px;
+    left: 200px;
+    border-radius: 10px;
+    display: none;  
+    box-shadow: 1px 1px 20px 1px grey;  
+    text-align: center;
+}
+#divInternal a{
+    font-family: cursive;
+    font-size: 1.5em;
+    display: grid;
+    text-decoration: none;
+    border: 2px solid #989595;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    transition: .4s;
+    background:transparent;
+    backdrop-filter: blur(20px);
+}
+#divInternal a:hover{
+    color: white;
+    background-color: #3232f3;
+    border-radius: 2px;
+    font-weight: bolder;
+}
+/*°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°*/
+#divDentistry{
+    width: 600px;
+    height: 400px;
+    background:transparent;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 160px;
+    left: 390px;
+    border-radius: 10px;
+    display: none;
+    box-shadow: 1px 1px 20px 1px grey;     
+    text-align:center;
+}
+#divDentistry a{
+    font-family: cursive;
+    font-size: 1.5em;
+    display: grid;
+    text-decoration: none;
+    border: 2px solid #989595;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    transition: .4s;
+    background:transparent;
+    backdrop-filter: blur(20px);
+}
+#divDentistry a:hover{
+    color: white;
+    background-color: #3232f3;
+    border-radius: 2px;
+    font-weight: bolder;
+}
+/*°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°*/
+#divGeneral_Surgery{
+    width: 600px;
+    height: 400px;
+    background:transparent;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 160px;
+    left: 370px;
+    border-radius: 10px;
+    display: none;  
+    box-shadow: 1px 1px 20px 1px grey; 
+    text-align: center;  
+}
+#divGeneral_Surgery a{
+    font-family: cursive;
+    font-size: 1.4em;
+    display: grid;
+    text-decoration: none;
+    border: 2px solid #989595;
+    margin: 10px;
+    padding: 10px;
+    margin: 35px;
+    border-radius: 5px;
+    color: black;
+    transition: .4s;
+    background:transparent;
+    backdrop-filter: blur(20px);
+}
+#divGeneral_Surgery a:hover{
+    color: white;
+    background-color: #3232f3;
+    border-radius: 2px;
+    font-weight: bolder;
+}
+/*°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°*/
+#divCardiac_Surgery{
+    width: 600px;
+    height: 400px;
+    background:transparent;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 160px;
+    left: 330px;
+    border-radius: 10px;
+    display: none; 
+    box-shadow: 1px 1px 20px 1px grey;    
+    text-align:center;
+}
+#divCardiac_Surgery a{
+    font-family: cursive;
+    font-size: 1.4em;
+    display: grid;
+    text-decoration: none;
+    border: 2px solid #989595;
+    margin: 10px;
+    padding: 10px;
+    margin: 35px;
+    border-radius: 5px;
+    color: black;
+    transition: .4s;
+    background:transparent;
+    backdrop-filter: blur(20px);
+}
+#divCardiac_Surgery a:hover{
+    color: white;
+    background-color: #3232f3;
+    border-radius: 2px;
+    font-weight: bolder;
+}
+/*°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°*/
+#divNeurosurgery{
+    width: 600px;
+    height: 400px;
+    background:transparent;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 160px;
+    left: 520px;
+    border-radius: 10px;
+    display: none;    
+    box-shadow: 1px 1px 20px 1px grey;
+    text-align: center;
+}
+#divNeurosurgery a{
+    font-family: cursive;
+    font-size: 1.4em;
+    display: grid;
+    text-decoration: none;
+    border: 2px solid #989595;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    color: black;
+    transition: .4s;
+    background:transparent;
+    backdrop-filter: blur(20px);
+}
+#divNeurosurgery a:hover{
+    color: white;
+    background-color: #3232f3;
+    border-radius: 2px;
+    font-weight: bolder;
+}
+/*°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°*/
+#divOphthalmology{
+    width: 600px;
+    height: 400px;
+    background:transparent;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 160px;
+    left: 700px;
+    border-radius: 10px;
+    display: none;  
+    box-shadow: 1px 1px 20px 1px grey; 
+    text-align: center;
+}
+#divOphthalmology a{
+    font-family: cursive;
+    font-size: 1.4em;
+    display: grid;
+    text-decoration: none;
+    border: 2px solid #989595;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    color: black;
+    transition: .4s;
+    background:transparent;
+    backdrop-filter: blur(20px);
+}
+#divOphthalmology a:hover{
+    color: white;
+    background-color: #3232f3;
+    border-radius: 2px;
+    font-weight: bolder;
+}
+/*Content 1*/
+.ali_photo {
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    top: 270px;
+    left: 780px;
+    background-image: radial-gradient(#14146b,blue);
+    z-index: -2;
+    border-radius: 20%;
+    transform: rotate(45deg);
+    box-shadow: 1px 1px 10px 1px black;
+}
+#img1{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 400px;
+    position: fixed;
+    top: 140px;
+    left: 700px;
+    z-index: -1;
+}
+/*
+.ali_photo #img2{
+    width: 800px;
+    height: 777px;
+    position: absolute;
+    top: -80px;
+    left: -140px;
+    z-index: -2;
+}
+*/
+.content1{
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    z-index: -1;
+}
+.content1 p{
+    position: absolute;
+    color: #0a0aa7;
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+.content1 strong{
+    position: absolute;
+    top: 40px;
+    color: #131358;
+    font-size: 2em;
+    font-weight: bolder;
+}
+.content1 a{
+    color: white;
+    background-color: orangered;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid orangered;
+    position: absolute;
+    top: 150px;
+    left: 20px;
+    box-shadow: 1px 1px 10px 1px black;
+    transition: .3s;
+}
+.content1 a:hover{
+    background-color: white;
+    color: orangered;
+}
+/*################################################################*/
+.sidali{
+    width: 500px;
+    height: 450px;
+    position: absolute;
+    top: 600px;
+    left: 80px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 1px #8e8a8a;
+    padding: 10px;
+}
+.sidali .img{
+    width: 99%;
+    height: 60%;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px 1px grey inset;
+    left: 10px;
+    margin-bottom: 10px;
+}
+.sidali img{
+    width: 250px;
+    height: 250px;
+    position: relative;
+    left: 100px;
+}
+/*################################################################*/
+.new_news{
+    width: 100%;
+    height: 500px;
+    background-color: transparent;
+    backdrop-filter: blur(30px);
+    position: absolute;
+    top: 700px;
+    display: flex;
+    
+}
+.new_news h4{
+    position: absolute;
+    top: -80px;
+    left: 600px;
+    font-size: 2em;
+    font-weight: bolder;
+    color: #131358;
+    text-decoration: underline double;
+}
+.new_news img{
+    width: 370px;
+    height: 475px;
+    position: relative;
+    left: -30px;
+}
+.news1,.news2,.news3,.news4{
+    cursor: pointer;
+    transition: .4s;
+    overflow: hidden;
+    width: 300px;
+    height: 480px;
+    background-color: transparent;
+    backdrop-filter: blur(30px);
+    border:  2px #131358 solid;
+    margin: 20px;
+    border-radius: 10px;
+}
+.news1:hover,.news2:hover,.news3:hover,.news4:hover{
+    border-color: wheat;
+    border-radius: 30px;
+    background-size: 510px;
+    opacity: .8;
+}
+/*################################################################*/
+.information{
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    position: absolute;
+    top: 1000vh;
+}
